@@ -51,10 +51,14 @@ public class Client {
             System.out.print(outputArray[i] + " ");
         }
 
-
         sortingAlgorithm = new MergeSort() ;
-
         outputArray = sortingAlgorithm.sort(new int[]{1,1,1,1,1,1});
+        for (int j : outputArray) {
+            System.out.print(j + " ");
+        }
+
+        sortingAlgorithm = new QuickSort() ;
+        outputArray = sortingAlgorithm.sort(new int[]{10});
         for (int j : outputArray) {
             System.out.print(j + " ");
         }
