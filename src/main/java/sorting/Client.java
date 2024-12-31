@@ -7,6 +7,7 @@ Selection Sort	    O(n2)	    O(n2)	    O(n2)	   O(1)
 Bubble Sort	        O(n)	    O(n2)	    O(n2)	   O(1)
 Insertion Sort	    O(n)	    O(n2)	    O(n2)	   O(1)
 Merge  Sort         O(nlogn)   O(nlogn)     O(nlogn)   0(n)
+Quick Sort          O(nlogn)   O(nlogn)     O(n2)
  */
 
 /*
@@ -15,6 +16,8 @@ Merge  Sort         O(nlogn)   O(nlogn)     O(nlogn)   0(n)
 3. Heap   Sort
 4. Bucket Sort
  */
+
+import java.util.Arrays;
 
 public class Client {
     private static SortingAlgorithm sortingAlgorithm = new SelectionSort() ;
@@ -62,6 +65,12 @@ public class Client {
         for (int j : outputArray) {
             System.out.print(j + " ");
         }
+
+        System.out.println("Sorting via Heap sort...");
+        sortingAlgorithm = new HeapSort() ;
+        int[] ans = sortingAlgorithm.sort(new int[] { 4,5,10,1,2,11});
+
+        Arrays.stream(ans).forEach((i)-> System.out.print(i + " "));
 
 
     }

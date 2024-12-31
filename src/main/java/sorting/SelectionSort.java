@@ -6,7 +6,6 @@ public class SelectionSort implements SortingAlgorithm{
     public int[] sort(int[] inputArray) {
         System.out.println("Sorting via Selection sort");
         int n = inputArray.length ;
-
         for(int i = n-1 ; i >= 0 ; i--){
             int maxIndex = i ;
             int j = i ;
